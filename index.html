@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plate Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    </head>
+<body>
+    <div class="container">
+
+        <div class="container">
+            <div class="disclaimer">
+                This calculator is for informational purposes only. Always consult a medical professional before starting any fitness or weight training program.
+            </div>
+        <h1>Plate Calculator</h1>
+        
+        <div class="input-group">
+            <label for="targetWeight">Target Weight (lbs)</label>
+            <input type="number" id="targetWeight" min="0" step="5" required>
+        </div>
+
+        <div class="input-group">
+            <label for="machineType">Machine Type</label>
+            <select id="machineType">
+                <option value="barbell">Barbell</option>
+                <option value="hackSquat">Hack Squat</option>
+                <option value="legPress">Leg Press</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+
+        <div class="input-group">
+            <label for="barWeight">Bar Weight (lbs)</label>
+            <input type="number" id="barWeight" value="35" min="0" required>
+        </div>
+
+        <button onclick="calculatePlates()">Calculate Plates</button>
+
+        <div id="error" class="error"></div>
+
+        <div id="results" class="results">
+            <h3>Plates needed per side:</h3>
+            <div id="plateList"></div>
+            <div class="plate-visualization">
+                <div class="barbell" id="barbell"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo-section">
+        <a href="https://www.builtbywelch.com" target="_blank" class="logo-link">
+            <img src="images/Welchregimelogo.jpg" alt="Andy Welch Media" class="logo-image">
+        </a>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

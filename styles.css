@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #f9b311;
+    --secondary-color: #f7df0b;
+    --background-color: #f8fafc;
+    --text-color: #000000;
+}
+
+
+.disclaimer {
+    background-color: #f1f5f9;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    color: #f59e0b;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+}
+
+select {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+button {
+    background-color: #f59e0b; 
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #d97706;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    display: none;
+}
+
+.plate-visualization {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    min-height: 120px;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.barbell {
+    width: calc(100% - 40px);
+    max-width: 400px;
+    height: 12px;
+    background-color: #64748b;
+    position: relative;
+    margin: 0 20px;
+}
+
+.barbell::before,
+.barbell::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #64748b;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.barbell::before {
+    left: -20px;
+}
+
+.barbell::after {
+    right: -20px;
+}
+
+.plate {
+    position: absolute;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    transform-origin: center center;
+}
+
+.plate:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.weight-label {
+    position: absolute;
+    font-size: 10px;
+    color: var(--text-color);
+    text-align: center;
+    width: 30px;
+    top: -16px;
+}
+
+.error {
+    color: #dc2626;
+    margin-top: 10px;
+    display: none;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+#plateList p {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+#plateList span {
+    min-width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border-radius: 4px;
+}
+
+
+.logo-section {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.logo-link:hover {
+    opacity: 0.18;
+}
+
+.logo-image {
+    max-width: 100px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    .barbell {
+        max-width: 600px;
+    }
+
+    .plate {
+        width: 24px;
+        font-size: 14px;
+    }
+
+    .weight-label {
+        font-size: 12px;
+        width: 40px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) { 
+    select,
+    input[type="number"] {
+        font-size: 16px;
+    }
+}
